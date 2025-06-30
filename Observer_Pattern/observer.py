@@ -1,6 +1,6 @@
 
 class Observer:
-    def update(self, credit):
+    def update(self, user, store, credit):
         """
         Observerが更新される際に呼び出されるメソッド。
         """

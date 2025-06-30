@@ -22,7 +22,6 @@ class Subject:
         "登録されているObserversに通知"
         for observer in self._observers:
             observer.update(self._user, self._store, self._credit)
-            print(f"Notified {observer.__class__.__name__}.")
     
     def set_used_store(self, user, store, amount):
         "クレジットの設定とObserversへの通知"
