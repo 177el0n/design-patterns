@@ -13,14 +13,14 @@ class LLMClient(object):
         return cls._instance
     
     def __init__(self):
-        if not self._initialized:
+        if not LLMClient._initialized:
             self.client = ChatOpenAI(
                 model="gpt-3.5-turbo",
                 temperature=0.7,
                 max_tokens=1000,
                 top_p=1.0,
             )
-            self._initialized = True
+            LLMClient._initialized = True
     
     def invoke(self, messages):
 
